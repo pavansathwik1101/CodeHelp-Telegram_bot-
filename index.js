@@ -1,6 +1,6 @@
 const axios = require('axios');
 const { Telegraf } = require('telegraf');
-const bot = new Telegraf('6046316287:AAEotykcjqgObZ1H5SkIGUBqWIuaiXnFgK0')
+const bot = new Telegraf('private token')
 const linearsearch=`# Linear Search in Python
 
 
