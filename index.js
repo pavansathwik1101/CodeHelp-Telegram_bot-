@@ -1,6 +1,15 @@
 require('dotenv').config()
 const axios = require('axios');
 const { Telegraf } = require('telegraf');
+const express = require("express")
+
+
+const app = express()
+
+app.get("/", (req, res)=> {
+    res.send("Bot is working")
+})
+
 
 const bot = new Telegraf(process.env.passkey)
 const linearsearch=`# Linear Search in Python
@@ -120,3 +129,8 @@ bot.command('binarysearch',(ctx)=>{ctx.reply(binarysearch)});
 bot.command('howareyou',(ctx)=>{ctx.reply('am gud,what about you?')});
 bot.command('mergesort',(ctx)=>{ctx.reply(mergesort)});
 bot.launch()
+
+const PORT = process.env.PORT || 8000
+app.listen(PORT, () => {
+    console.log("RUNNING ON " + PORT)
+})
