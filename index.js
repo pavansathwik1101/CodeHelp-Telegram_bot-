@@ -2,7 +2,7 @@ require('dotenv').config()
 const axios = require('axios');
 const { Telegraf } = require('telegraf');
 
-const bot = new Telegraf(process.env.passkey)
+const bot = new Telegraf('6046316287:AAEotykcjqgObZ1H5SkIGUBqWIuaiXnFgK0')
 const linearsearch=`# Linear Search in Python
 
 
